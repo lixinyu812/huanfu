@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        legend {
+            color: red;
+        }
+        
+        col {
+            border: 1px rgb(199, 196, 196);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            float: left;
+        }
+    </style>
+    <title>网页换肤</title>
+
+
+</head>
+
+<body>
+    <fieldset style="width: 580px;height:165px ;">
+        <legend style="font-size: 28px;font-weight: bold;">网页换肤</legend>
+        <div style="border:solid 2px rgb(199, 196, 196); height:30px;margin-top: 20px;">
+            <ul>
+                <li id="aa" title="灰色" style="width:15px; height:15px; margin-top: -8px; margin-left: -30px; background-color: rgb(170, 167, 167);">
+                </li>
+                <li id="bb" title="粉色" style="width:15px; height:15px; margin-top: -8px; margin-left: -10px; background-color: rgb(250, 218, 223);">
+                </li>
+                <li id="cc" title="黄色" style="width:15px; height:15px; margin-top: -8px; margin-left: 5px; background-color: rgb(248, 248, 160);">
+                </li>
+                <li id="dd" title="绿色" style="width:15px; height:15px; margin-top: -8px; margin-left: 5px; background-color: paleturquoise;">
+                </li>
+                <li id="ee" title="蓝色" style="width:15px; height:15px; margin-top: -8px; margin-left: 5px; background-color:rgb(198, 198, 255) ;">
+                </li>
+                <li id="ff" title="紫色" style="width:15px; height:15px; margin-top: -8px; margin-left: 5px; background-color: rgb(221, 150, 221);">
+                </li>
+            </ul>
+
+        </div>
+        </div>
+        <div id="box" style="height:50px; width:550px;margin-left: 15px;">
+            <p>
+                LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。
+            </p>
+        </div>
+    </fieldset>
+</body>
+<script>
+    var colorvalue = window.localStorage.getItem("localColor");
+    var li = document.getElementsByTagName("li");
+    var aa = document.getElementById("aa");
+    var bb = document.getElementById("bb");
+    var cc = document.getElementById("cc");
+    var dd = document.getElementById("dd");
+    var ee = document.getElementById("ee");
+    var ff = document.getElementById("ff");
+    var box = document.getElementById("box");
+    window.onload = function() {
+        aa.onclick = function() {
+            aa.style.marginTop = "-14px";
+            box.style.backgroundColor = " rgb(170, 167, 167)";
+            bb.style.marginTop = "-8px";
+            cc.style.marginTop = "-8px";
+            dd.style.marginTop = "-8px";
+            ee.style.marginTop = "-8px";
+            ff.style.marginTop = "-8px";
+            localStorage.setItem("localColor", " rgb(170, 167, 167)")
+        }
+        bb.onclick = function() {
+            bb.style.marginTop = "-14px";
+            box.style.backgroundColor = " rgb(250, 218, 223)";
+            aa.style.marginTop = "-8px";
+            cc.style.marginTop = "-8px";
+            dd.style.marginTop = "-8px";
+            ee.style.marginTop = "-8px";
+            ff.style.marginTop = "-8px";
+            localStorage.setItem("localColor", "rgb(250, 218, 223)")
+        }
+        cc.onclick = function() {
+            cc.style.marginTop = "-14px";
+            box.style.backgroundColor = "rgb(248, 248, 160)";
+            bb.style.marginTop = "-8px";
+            aa.style.marginTop = "-8px";
+            dd.style.marginTop = "-8px";
+            ee.style.marginTop = "-8px";
+            ff.style.marginTop = "-8px";
+            localStorage.setItem("localColor", "rgb(248, 248, 160)")
+        }
+        dd.onclick = function() {
+            dd.style.marginTop = "-14px";
+            box.style.backgroundColor = " paleturquoise";
+            bb.style.marginTop = "-8px";
+            cc.style.marginTop = "-8px";
+            aa.style.marginTop = "-8px";
+            ee.style.marginTop = "-8px";
+            ff.style.marginTop = "-8px";
+            localStorage.setItem("localColor", "paleturquoise")
+        }
+        ee.onclick = function() {
+            ee.style.marginTop = "-14px";
+            box.style.backgroundColor = " rgb(198, 198, 255)";
+            bb.style.marginTop = "-8px";
+            cc.style.marginTop = "-8px";
+            dd.style.marginTop = "-8px";
+            aa.style.marginTop = "-8px";
+            ff.style.marginTop = "-8px";
+            localStorage.setItem("localColor", "rgb(198, 198, 255)")
+        }
+        ff.onclick = function() {
+            ff.style.marginTop = "-14px";
+            box.style.backgroundColor = "  rgb(221, 150, 221)";
+            bb.style.marginTop = "-8px";
+            cc.style.marginTop = "-8px";
+            dd.style.marginTop = "-8px";
+            ee.style.marginTop = "-8px";
+            aa.style.marginTop = "-8px";
+            localStorage.setItem("localColor", "rgb(221, 150, 221)")
+        }
+
+        box.style.backgroundColor = " rgb(170, 167, 167)";
+
+        if (colorvalue) {
+            box.style.backgroundColor = colorvalue;
+            
+            
+        }
+    }
+</script>
+
+<html>
